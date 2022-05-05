@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get information</title>
+</head>
+<body>
+  <h1>Get info of Element - to console</h1>
+  <div id="info">
+    information of object
+    <p>Paragraph element</p>
+    <p>Paragraph two</p>
+    <p>Paragraph three</p>
+  </div>
+
+  <script type="text/javascript">
+    var info_node = document.getElementById('info');
+    console.log(info_node);
+    console.log(info_node.tagName);
+    console.log(info_node.nodeType);
+    console.log(info_node.innerHTML);
+    console.log(info_node.outerHTML);
+    console.log(info_node.innerText);
+    console.log(info_node.outerText);
+  </script>
+</body>
+</html>
