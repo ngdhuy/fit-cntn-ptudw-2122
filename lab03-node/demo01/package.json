@@ -1,0 +1,14 @@
+{
+  "name": "demo01",
+  "version": "1.0.0",
+  "description": "Introduce nodejs",
+  "main": "index.js",
+  "scripts": {
+    "run": "nodemon index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "NDHuy",
+  "license": "ISC"
+}
