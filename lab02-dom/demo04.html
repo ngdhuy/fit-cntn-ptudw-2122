@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Edit HTML DOM</h1>
+  <button type="button">Add new</button>
+  <button type="button">Remove one</button>
+  <button type="button">Remove alls</button>
+  <hr />
+  <div id="list"></div>
+
+  <script type="text/javascript">
+    var arrButton = document.getElementsByTagName('button');
+    // var div_node = document.getElementById('list');
+    var div_node = document.querySelector('#list');
+
+    var i = 1;
+    // button add new
+    arrButton[0].addEventListener('click', function(){
+      console.log(this.innerHTML);
+      let p_node = document.createElement('p');
+      div_node.appendChild(p_node);     
+      let text_node = document.createTextNode(`${i++}. Item`);
+      p_node.appendChild(text_node);
+    });
+
+    // button remove one
+    arrButton[1].addEventListener('click', function(){
+      console.log(this.innerHTML);
+      if(div_node.children.length > 0) {
+        div_node.removeChild(div_node.lastChild);
+        i--;
+      }
+    });
+
+    // button remove alls
+    arrButton[2].addEventListener('click', function(){
+      console.log(this.innerHTML);
+      div_node.innerHTML = '';
+      i = 1;
+    });
+  </script>
+</body>
+</html>

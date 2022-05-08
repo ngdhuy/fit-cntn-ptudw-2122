@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    h1 { color: #cc3366; }
+    
+    #footer { background-color: #8629fa; }
+    
+    .big-size { 
+      font-size: 2.2rem;
+      font-style: italic;
+    }
+
+    .color-red {
+      color: #cc3366;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS SELECTOR</h1>
+  <div>
+    <ul>
+      <li>item 1</li>
+      <li class='big-size color-red'>item 2</li>
+      <li>item 3</li>
+      <li class='color-red'>item 4</li>
+    </ul>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum esse praesentium, in a nihil asperiores molestias? Magni nam voluptatibus nihil, adipisci animi odit, qui, voluptates nisi a quis sapiente molestiae?</p>
+  </div>
+  <p class='color-red'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro inventore esse necessitatibus optio quos dolore aut aspernatur, repudiandae asperiores? Deleniti esse minima quibusdam facere nostrum nobis expedita dolore aliquam doloremque!</p>
+  <div id="footer">This is footer</div>
+  
+  <script type="text/javascript">
+    // var element_id = document.getElementById('footer');
+    var element_id = document.querySelector('#footer');
+    console.log(element_id);
+
+    // var elements_tag_name = document.getElementsByTagName('li');
+    var elements_tag_name = document.querySelectorAll('li')
+    console.log(elements_tag_name);
+
+    // var elements_class_name = document.getElementsByClassName('color-red');
+    var elements_class_name = document.querySelectorAll('.color-red');
+    console.log(elements_class_name);
+  </script>
+</body>
+</html>
