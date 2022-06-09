@@ -1,0 +1,16 @@
+// Define Mixing ~ function
+@mixin box($color, $padding: 50px, $margin: 30px)
+  padding: $padding
+  margin: $margin
+  border: 1px solid $color
+
+.footer
+  .item
+    @include box(#cc3366, 10px)
+    
+    .id
+      color: #8899ab
+
+    .name
+      font-style: italic
+      color: #6633cc
